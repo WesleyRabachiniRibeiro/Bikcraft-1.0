@@ -1,0 +1,195 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F7F7;
+    display: grid;
+    margin: 0px;
+    justify-items: center;
+    gap: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+
+p, h1, h2, h3{
+    margin: 0px;
+}
+
+p{
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header{
+    display: grid;
+    justify-content: center;
+    gap: 60px;
+}
+
+.brand{
+    margin: 60px  auto;
+}
+
+.nav_ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_ul_item a{
+    display: block;
+    background-color: #FFF;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    color: #000;
+    border: 2px solid transparent;
+}
+
+
+.nav_ul_item a:hover{
+    border-color: #e21;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+}
+
+.card_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover center right;
+}
+
+.card_info::after{
+    content: '';
+    position: absolute;
+    background-color: #e21;
+    width: 60px;
+    height: 4px;
+    top: 30px;
+    right: -30px;
+}
+
+.card_info{
+    display: grid;
+    position: relative;
+    background-color: #FFF;
+    padding: 2.5rem;
+    text-align: right;
+    align-content: center;
+    justify-items: end;
+    gap: 20px;
+}
+
+.card_info a{
+    color: #FFF;
+    background-color: #e21;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.card_info a:hover{
+    background-color: #900;
+}
+
+.subtitle{
+    text-transform: uppercase;
+    align-self: center;
+    background: url('./img/onda.svg');
+    color: rgba(0, 0, 0, 0.2);
+    text-align: end;
+    padding: 2.5rem;
+    font-size: 4rem;
+}
+
+.benefits{
+    background-color: #FFF;
+    padding: 2.5rem;
+}
+
+.benefits-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.benefits-item{
+    font-size: 1.25rem;
+    grid-column: 2;
+    gap: 10px 20px;
+    padding: 20px;
+    border-left: 4px solid transparent;
+}
+
+.benefits-item p{
+    grid-column: 2;
+}
+
+.benefits-item:nth-child(odd){
+    background-color: #F7F7F7;
+}
+
+.benefits-item:hover{
+    border-left: 4px solid #e21;
+}
+
+
+footer{
+    width: 100%;
+    background-color: #FFF;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+@media(max-width: 1024px){
+    body{
+        gap: 25px;
+    }
+    header{
+        gap: 30px;
+    }
+    .card{
+        max-width: 500px;
+        grid-template-columns: 1fr;
+    }
+    .card_img{
+        grid-row: 1;
+    }
+    .card_info{
+        text-align: start;
+    }
+    .card_info::after{
+        top: -2px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .card{
+        max-width: 350px;
+    }
+    .subtitle{
+        font-size: 2.5rem;
+    }
+}
