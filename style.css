@@ -1,10 +1,31 @@
+:root{
+    --color-primary: #e21;
+    --color-dark-primary: #900;
+    --background-primary: #f7f7f7;
+    --background-secondary: #ffffff;
+    --text-primary: #000000;
+    --text-background: rgba(0, 0, 0, 0.2);
+    --wave-background: url('./img/onda-clara.svg');
+} 
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --background-primary: #111111;
+        --background-secondary: #000000;
+        --text-primary: #ffffff;
+        --text-background: rgba(255, 255, 255, 0.2);
+        --wave-background:  url('./img/onda-escura.svg');
+    } 
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F7F7F7;
+    background-color: var(--background-primary);
     display: grid;
     margin: 0px;
     justify-items: center;
     gap: 60px;
+    color: var(--text-primary);
 }
 
 a{
@@ -51,17 +72,17 @@ header{
 
 .nav_ul_item a{
     display: block;
-    background-color: #FFF;
+    background-color: var(--background-secondary);
     border-radius: 4px;
     padding: 1rem 2rem;
     text-transform: uppercase;
-    color: #000;
+    color: var(--text-primary);
     border: 2px solid transparent;
 }
 
 
 .nav_ul_item a:hover{
-    border-color: #e21;
+    border-color: var(--color-primary);
 }
 
 .card{
@@ -79,7 +100,7 @@ header{
 .card_info::after{
     content: '';
     position: absolute;
-    background-color: #e21;
+    background-color: var(--color-primary);
     width: 60px;
     height: 4px;
     top: 30px;
@@ -89,7 +110,7 @@ header{
 .card_info{
     display: grid;
     position: relative;
-    background-color: #FFF;
+    background-color: var(--background-secondary);
     padding: 2.5rem;
     text-align: right;
     align-content: center;
@@ -98,29 +119,29 @@ header{
 }
 
 .card_info a{
-    color: #FFF;
-    background-color: #e21;
+    color: #f7f7f7;
+    background-color: var(--color-primary);
     padding: 1rem 2rem;
     text-transform: uppercase;
     border-radius: 4px;
 }
 
 .card_info a:hover{
-    background-color: #900;
+    background-color: var(--color-dark-primary);
 }
 
 .subtitle{
     text-transform: uppercase;
     align-self: center;
-    background: url('./img/onda.svg');
-    color: rgba(0, 0, 0, 0.2);
+    background: var(--wave-background);
+    color: var(--text-background);
     text-align: end;
     padding: 2.5rem;
     font-size: 4rem;
 }
 
 .benefits{
-    background-color: #FFF;
+    background-color: var(--background-secondary);
     padding: 2.5rem;
 }
 
@@ -142,17 +163,17 @@ header{
 }
 
 .benefits-item:nth-child(odd){
-    background-color: #F7F7F7;
+    background-color: var(--background-primary);
 }
 
 .benefits-item:hover{
-    border-left: 4px solid #e21;
+    border-left: 4px solid var(--color-primary);
 }
 
 
 footer{
     width: 100%;
-    background-color: #FFF;
+    background-color: var(--background-secondary);
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
